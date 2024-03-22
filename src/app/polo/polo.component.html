@@ -1,0 +1,11 @@
+<div class="container">
+  <h1> Palíndromo</h1>
+  <input type="text" [(ngModel)]="palavra" (input)="verificarPalindromo()" class="input-field">
+  <div *ngIf="resultado !== null" class="result-container">
+    <p>A palavra "{{ palavra }}" {{ resultado ? 'é' : 'não é' }} um Palíndromo.</p>
+    <div *ngIf="palavra !== ''" class="image-container">
+      <img *ngIf="resultado" src="../assets/img/p.jpeg" alt="Feliz" class="result-image">
+      <img *ngIf="!resultado" src="../assets/img/imagess.jpeg" alt="Triste" class="result-image">
+    </div>
+  </div>
+</div>
